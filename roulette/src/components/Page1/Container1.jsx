@@ -2,12 +2,12 @@ import { Wheel } from "react-custom-roulette";
 import { useState } from "react";
 
 const data = [
-  { option: "Film", style: { backgroundColor: "red", textColor: "White" } },
-  { option: "Série", style: { backgroundColor: "black", textColor: "White" } },
-  { option: "Film", style: { backgroundColor: "red", textColor: "White" } },
-  { option: "Série", style: { backgroundColor: "black", textColor: "White" } },
-  { option: "Film", style: { backgroundColor: "red", textColor: "White" } },
-  { option: "Série", style: { backgroundColor: "black", textColor: "White" } },
+  { option: "", style: { backgroundColor: "red", textColor: "White" } },
+  { option: "", style: { backgroundColor: "black", textColor: "White" } },
+  { option: "", style: { backgroundColor: "red", textColor: "White" } },
+  { option: "", style: { backgroundColor: "black", textColor: "White" } },
+  { option: "", style: { backgroundColor: "red", textColor: "White" } },
+  { option: "", style: { backgroundColor: "black", textColor: "White" } },
 ];
 
 export default function Container1() {
@@ -25,8 +25,8 @@ export default function Container1() {
       <div>
         <p className="text1">texte de présentation de la roulette</p>
       </div>
-
-      <div className="container1">
+      <div className="container">
+        <div className="container1">
         <button type="button" className="btn1">
           Films
         </button>
@@ -39,7 +39,7 @@ export default function Container1() {
         <select name="" id="">
           selection de la durée
         </select>
-
+        </div>
         <div className="wheel">
           <Wheel
             mustStartSpinning={mustSpin}
@@ -49,11 +49,13 @@ export default function Container1() {
               setMustSpin(false);
             }}
           />
-          <button type="button" onClick={handleSpinClick}>
+          <button className="btn1" type="button" onClick={handleSpinClick}>
             Go
           </button>
         </div>
       </div>
+      
+     
 
       <div className="roulette">carte affiché par la roulette</div>
     </article>
