@@ -1,13 +1,21 @@
+import React from "react";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
+import image from "./net.jpg";
+
 function Container2() {
   return (
-    <article className="article2">
-      <h1>Films</h1>
-      <div className="carroussel">
-        <img src="" alt="" />
-        <img src="" alt="" />
-        <img src="" alt="" />
+    <Carousel>
+      <div>
+        <img src={image} alt="" />
       </div>
-    </article>
+      <div>
+        <img src={image} alt="" />
+      </div>
+      <div>
+        <img src={image} alt="" />
+      </div>
+    </Carousel>
   );
 }
 
