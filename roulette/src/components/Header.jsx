@@ -1,16 +1,14 @@
 import React from "react";
 import Nav from "./Nav";
-import logo from "../assets/logo.png";
+import logo from "../assets/N-Fond-Noir.gif";
 
 function Header() {
   return (
     <div className="header">
-      <div className="logo">
+      <div>
         <img className="logo" src={logo} alt="" />
       </div>
-      <div>
-        <Nav />
-      </div>
+      <Nav />
     </div>
   );
 }

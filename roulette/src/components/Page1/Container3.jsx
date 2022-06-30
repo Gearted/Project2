@@ -1,21 +1,29 @@
-import React from "react";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
-import image from "./net.jpg";
+import Affiche from "../Affiche";
+
+import axios from "axios";
+import { useEffect, useState } from "react";
 
 function Container3() {
+  const [affiche, setAffiche] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(
+        "https://api.themoviedb.org/3/discover/tv?sort_by=popularity.desc&api_key=3610ee86baad1de5acf5c561982cf1d3"
+      )
+      .then((res) => {
+        setAffiche(res.data.results);
+      });
+  });
+
   return (
-    <Carousel>
-      <div>
-        <img src={image} alt="" />
+    <div className="article2">
+      <div className="content1">
+        {affiche.map((affiche) => (
+          <Affiche key={affiche.id} affiche={affiche} />
+        ))}
       </div>
-      <div>
-        <img src={image} alt="" />
-      </div>
-      <div>
-        <img src={image} alt="" />
-      </div>
-    </Carousel>
+    </div>
   );
 }
 

@@ -1,16 +1,20 @@
-import { Wheel } from "react-custom-roulette";
+import React from "react";
 import { useState } from "react";
+import { Wheel } from "react-custom-roulette";
 
-const data = [
-  { option: "", style: { backgroundColor: "red", textColor: "White" } },
-  { option: "", style: { backgroundColor: "black", textColor: "White" } },
-  { option: "", style: { backgroundColor: "red", textColor: "White" } },
-  { option: "", style: { backgroundColor: "black", textColor: "White" } },
-  { option: "", style: { backgroundColor: "red", textColor: "White" } },
-  { option: "", style: { backgroundColor: "black", textColor: "White" } },
-];
+function Container1() {
+  const data = [
+    {
+      option: "",
+      style: { backgroundColor: "black" },
+    },
+    { option: "", style: { backgroundColor: "red" } },
+    { option: "", style: { backgroundColor: "black" } },
+    { option: "", style: { backgroundColor: "red" } },
+    { option: "", style: { backgroundColor: "black" } },
+    { option: "", style: { backgroundColor: "red" } },
+  ];
 
-export default function Container1() {
   const [mustSpin, setMustSpin] = useState(false);
   const [prizeNumber, setPrizeNumber] = useState(0);
 
@@ -19,45 +23,48 @@ export default function Container1() {
     setPrizeNumber(newPrizeNumber);
     setMustSpin(true);
   };
-
   return (
-    <article className="article1">
-      <div>
-        <p className="text1">texte de présentation de la roulette</p>
-      </div>
-      <div className="container">
-        <div className="container1">
-        <button type="button" className="btn1">
-          Films
-        </button>
-        <button type="button" className="btn2">
-          Série
-        </button>
-        <select name="" id="">
-          selection du genre
-        </select>
-        <select name="" id="">
-          selection de la durée
-        </select>
+    <div className="content-container1">
+      <article className="article1">
+        <div>
+          <p>texte de présentation de la roulette</p>
         </div>
-        <div className="wheel">
-          <Wheel
-            mustStartSpinning={mustSpin}
-            prizeNumber={prizeNumber}
-            data={data}
-            onStopSpinning={() => {
-              setMustSpin(false);
-            }}
-          />
-          <button className="btn1" type="button" onClick={handleSpinClick}>
-            Go
-          </button>
-        </div>
-      </div>
-      
-     
 
-      <div className="roulette">carte affiché par la roulette</div>
-    </article>
+        <div className="container">
+          <div className="container1">
+            <button type="button" className="btn1">
+              Films
+            </button>
+            <button type="button" className="btn1">
+              Série
+            </button>
+
+            <select className="select" name="Genre" id="Genre">
+              <option value="">Drame</option>
+              <option value="">Comédie</option>
+              <option value="">Action</option>
+              <option value="">Thriller</option>
+              <option value="">Fantastique</option>
+              <option value="">Horreur</option>
+            </select>
+          </div>
+          <div className="roulette">
+            <Wheel
+              mustStartSpinning={mustSpin}
+              prizeNumber={prizeNumber}
+              data={data}
+              onStopSpinning={() => {
+                setMustSpin(false);
+              }}
+            />
+            <button className="btn1" onClick={handleSpinClick}>
+              GO
+            </button>
+          </div>
+        </div>
+      </article>
+    </div>
   );
 }
+
+export default Container1;
