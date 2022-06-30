@@ -3,18 +3,20 @@ function Container31() {
     <article className="article31">
       <div>
         <h2>Name</h2>
-        <input type="text" />
+        <input className="input-contact" type="text" />
       </div>
       <div>
         <h2>Email</h2>
-        <input type="text" />
+        <input className="input-contact" type="email" />
       </div>
       <div>
         <h2>Message</h2>
-        <input type="text" />
+        <input className="input-contact1" type="text" />
       </div>
       <div>
-        <button type="button">Envoyer</button>
+        <button className="btn-contact" type="button">
+          Envoyer
+        </button>
       </div>
     </article>
   );

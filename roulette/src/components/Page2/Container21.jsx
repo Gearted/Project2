@@ -17,8 +17,15 @@ function Container21() {
 
   return (
     <div className="article21">
-      <button type="button">Films</button>
-      <button type="button">Série</button>
+      <div group-btn>
+        <button className="btn2" type="button">
+          Films
+        </button>
+        <button className="btn2" type="button">
+          Série
+        </button>
+      </div>
+
       <div className="content">
         {movie.map((movie) => (
           <Card key={movie.id} movie={movie} />

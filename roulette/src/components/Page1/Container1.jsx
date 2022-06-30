@@ -6,13 +6,15 @@ function Container1() {
   const data = [
     {
       option: "",
-      style: { backgroundColor: "black" },
+      style: { backgroundColor: "#141414" },
     },
-    { option: "", style: { backgroundColor: "red" } },
-    { option: "", style: { backgroundColor: "black" } },
-    { option: "", style: { backgroundColor: "red" } },
-    { option: "", style: { backgroundColor: "black" } },
-    { option: "", style: { backgroundColor: "red" } },
+    { option: "", style: { backgroundColor: "#E10915" } },
+    { option: "", style: { backgroundColor: "#141414" } },
+    { option: "", style: { backgroundColor: "#E10915" } },
+    { option: "", style: { backgroundColor: "#141414" } },
+    { option: "", style: { backgroundColor: "#E10915" } },
+    { option: "", style: { backgroundColor: "#141414" } },
+    { option: "", style: { backgroundColor: "#E10915" } },
   ];
 
   const [mustSpin, setMustSpin] = useState(false);
@@ -45,6 +47,11 @@ function Container1() {
           <option value="">Thriller</option>
           <option value="">Fantastique</option>
           <option value="">Horreur</option>
+        </select>
+        <select className="select" name="time" id="time" type="time">
+          <option value="">0 à 1h</option>
+          <option value="">1h à 2h</option>
+          <option value="">+2h</option>
         </select>
       </div>
 

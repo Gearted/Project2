@@ -9,7 +9,7 @@ function Container2() {
   useEffect(() => {
     axios
       .get(
-        "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=3610ee86baad1de5acf5c561982cf1d3"
+        "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=3610ee86baad1de5acf5c561982cf1d3&language=fr-FR"
       )
       .then((res) => {
         setAffiche(res.data.results);
