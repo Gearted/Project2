@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { Wheel } from "react-custom-roulette";
+import "./Container1.css"
 
 function Container1() {
   const data = [

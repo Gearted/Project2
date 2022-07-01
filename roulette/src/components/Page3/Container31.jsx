@@ -1,3 +1,7 @@
+import "./Container31.css"
+
+
+
 function Container31() {
   return (
     <article className="article31">

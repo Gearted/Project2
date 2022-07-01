@@ -68,118 +68,13 @@ body {
     border: none;
   }
   
-  /*Container1*/
+  
   
 
   
-  .article1 {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    color: white;
-    background-color: #141414;
-    border-radius: 20px;
-    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
-    margin: 20px; 
-    text-align: center;
-  }
   
   
-  .container1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    
-  }
   
-  .roulette {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-left: 50px ;
-    padding: 20px;
-  }
-  
-  .btn1 {
-    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
-    color: white;
-    background-color: #141414;
-    width:150px;
-    height: 40px;
-    margin: 10px;
-    border: none;
-    text-align: center;
-    border-radius: 20px;
-  }
-
-  .btn1:active {
-    background-color: #E10915;
-    border-radius: 20px;
-  }
-  
-  .select {
-    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
-    color: white;
-    background-color: #141414;
-    width:150px;
-    height: 30px;
-    margin: 10px;
-    border: none;
-    border-radius: 20px;
-    text-align: center;
-  }
-  
-  /*Container 2 */
-  
-  .content1 {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    
-  }
-  
-  .picture {
-    margin: 20px;
-    height: 500px;
-    width: 300px;
-    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
-    border-radius: 20px;
-  transition: all 0.5s 0s ease;
-  }
-  
-  .picture:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-  }
-  
-  /*Container 21*/
-
-  .article21 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-
-  .btn2 {
-    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
-    color: white;
-    background-color: #141414;
-    width:150px;
-    height: 40px;
-    margin: 10px;
-    border: none;
-    text-align: center;
-    border-radius: 20px;
-  }
-
-  .btn2:active {
-    background-color: #E10915;
-    border-radius: 20px;
-  }
   
   /* Card */
   
@@ -223,51 +118,6 @@ body {
       object-position: top;
       display: block;
       margin: 0 auto;
-  }
-
-
-  /*Container31*/
-
-  .article31 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    color: white;
-    border-radius: 20px;
-    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
-    
-    margin: 20px;
-    height: 600px;
-    width: 1200px;
-  }
-
-  .input-contact {
-    border-radius: 20px;
-    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
-    border: none;
-    width: 250px;
-    height: 30px;
-  }
-  
-  .input-contact1 {
-    border-radius: 20px;
-    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);;
-    border: none;
-    width: 250px;
-    height: 100px;
-  }
-
-  .btn-contact {
-    margin: 30px;
-    border-radius: 20px;
-    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
-    border: none;
-    background-color: #141414;
-    color: white;
-    cursor: pointer;
-    width: 250px;
-    height: 30px;
   }
   
   
