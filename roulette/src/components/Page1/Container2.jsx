@@ -1,4 +1,4 @@
-import Affiche from "../Affiche";
+import Affiche from "../Affiche/Affiche";
 import "./Container2.css"
 
 import axios from "axios";

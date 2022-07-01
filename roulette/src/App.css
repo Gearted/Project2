@@ -5,68 +5,11 @@ body {
     
   }
   
-  /*components*/
   
-  /*Header*/
   
-  .header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background-color: #141414;
-    font-size: 20px;
-    border-radius: 20px;
-    margin: 20px;
-    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
-    border: none;
-    padding: 10px;
-  }
-  
-  .logo {
-    width: 150px;
-    height: 150px;
-    border-radius: 20px;
-    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
-    
-  }
-  
-  /*Nav*/
-  
-  .nav ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-  }
-  
-  .nav ul li {
-    margin: 20px;
-    list-style: none;
-    padding: 20px;
-  }
 
   
-  .nav-input {
-    border: none;
-    margin: 20px;
-    height: 30px;
-    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
-    border: none;
-    border-radius: 20px;
-  }
-  .nav a {
-    text-decoration: none;
-    color: white;
-    padding: 10px;
-  }
-  
-  .nav a.nav-active {
-    background-color: #E10915;
-    border-radius: 20px;
-    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
-    border: none;
-  }
+
   
   
   
@@ -76,79 +19,15 @@ body {
   
   
   
-  /* Card */
-  
-  .content {
-    background-color: #141414;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
-  }
-  
-  .card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    min-width: 260px;
-    max-width: 280px;
-    height: 600px;
-    background-color: #141414;
-    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
-    
-    border-radius: 35px;
-    margin: 20px;
-    padding: 26px 15px 30px;
-    color: white;
-    transition: all 0.5s 0s ease;
-  }
-  
-  .card:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-  }
-  
-  .card img {
-    width: 80%;
-      height: 254px;
-      border-radius: 20px;
-      object-fit: cover;
-      object-position: top;
-      display: block;
-      margin: 0 auto;
-  }
   
   
   
-  /*Footer */
   
-  .footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    color: white;
-    background-color: #141414;
-    border-radius: 20px;
-    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
-    margin: 20px; 
-    text-align: center;
-    
-  }
   
-  .mentions{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .contact{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
+  
+  
+  
+  
   
   
 
