@@ -1,20 +1,12 @@
-.content {
-    background-color: #141414;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
-  }
+
   
   .card {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
     flex-direction: column;
     min-width: 260px;
     max-width: 280px;
-    height: 600px;
+    height: 800px;
     background-color: #141414;
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
     
@@ -31,8 +23,8 @@
   }
   
   .card img {
-    width: 80%;
-      height: 254px;
+    width: 90%;
+      height: 300px;
       border-radius: 20px;
       object-fit: cover;
       object-position: top;
