@@ -1,7 +1,7 @@
-import "./Card.css"
+import "./Card.css";
 import React from "react";
 
-export default function Card({ movie }) {
+export default function CardMovie({ movie }) {
   return (
     <div className="card">
       <img
