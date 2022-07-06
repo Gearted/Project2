@@ -23,3 +23,15 @@
     align-items: center;
     flex-direction: column;
   }
+
+
+  .reseaux {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    margin-left: 20px;
+  }
+
+  .reseaux:hover {
+    transform: scale(1.1);
+  }

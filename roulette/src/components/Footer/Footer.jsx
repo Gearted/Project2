@@ -1,5 +1,7 @@
-import "./Footer.css"
-
+import "./Footer.css";
+import twitter from "../assets/twitter.png";
+import facebook from "../assets/facebook.png";
+import git from "../assets/Github.png";
 
 function Footer() {
   return (
@@ -17,7 +19,9 @@ function Footer() {
       </div>
 
       <div className="reseau">
-        <p>Réseaux Sociaux</p>
+        <img className="reseaux" src={twitter} alt="twitter" />
+        <img className="reseaux" src={facebook} alt="facebook" />
+        <img className="reseaux" src={git} alt="git" />
       </div>
     </footer>
   );
