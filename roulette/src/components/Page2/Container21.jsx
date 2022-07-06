@@ -36,10 +36,9 @@ function Container21() {
 
   return (
     <div className="article21">
-      <button className="btn2">Films</button>
-      <button className="btn2">Série</button>
       <div className="search">
         <input
+          className="search_result"
           type="text"
           name="search"
           id="search"
