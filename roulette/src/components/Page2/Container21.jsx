@@ -1,9 +1,7 @@
-import Card from "../Card/Card"
-import "./Container21.css"
+import Card from "../Card/Card";
+import "./Container21.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
-
-
 
 function Container21() {
   const [movie, setMovie] = useState([]);
@@ -31,23 +29,17 @@ function Container21() {
 
   return (
     <div className="article21">
-     
-        <button className="btn2">
-            Films
-        </button>
-        <button className="btn2">Série</button>
-         <div className="content">
+      <button className="btn2">Films</button>
+      <button className="btn2">Série</button>
+      <div className="content">
         {movie.map((movie) => (
           <Card key={movie.id} movie={movie} />
         ))}
         {serie.map((movie) => (
           <Card key={movie.id} movie={movie} />
         ))}
-        
       </div>
-      </div>
-        
-
+    </div>
   );
 }
 

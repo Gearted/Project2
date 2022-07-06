@@ -1,4 +1,4 @@
-import "./Nav.css"
+import "./Nav.css";
 import { NavLink } from "react-router-dom";
 
 function Nav() {
@@ -29,8 +29,6 @@ function Nav() {
             Contact
           </NavLink>
         </li>
-
-        <input className="nav-input" type="text" placeholder="search" />
       </ul>
     </nav>
   );

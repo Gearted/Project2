@@ -1,5 +1,5 @@
 import Affiche from "../Affiche/Affiche";
-import "./Container2.css"
+import "./Container2.css";
 
 import axios from "axios";
 import { useEffect, useState } from "react";
