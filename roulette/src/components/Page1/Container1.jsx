@@ -1,7 +1,9 @@
 import React from "react";
 import { useState } from "react";
 import { Wheel } from "react-custom-roulette";
-import "./Container1.css"
+import "./Container1.css";
+import axios from "axios";
+import CardMovie from "../Card/CardMovie";
 
 function Container1() {
   const data = [
@@ -20,6 +22,19 @@ function Container1() {
 
   const [mustSpin, setMustSpin] = useState(false);
   const [prizeNumber, setPrizeNumber] = useState(0);
+  const [randomMovie, setRandomMovie] = useState("");
+
+  const handleChange = () => {
+    axios
+      .get(
+        "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=3610ee86baad1de5acf5c561982cf1d3&language=fr-FR"
+      )
+      .then((res) => {
+        setRandomMovie(
+          res.data.results[Math.floor(Math.random() * res.data.results.length)]
+        );
+      });
+  };
 
   const handleSpinClick = () => {
     const newPrizeNumber = Math.floor(Math.random() * data.length);
@@ -33,29 +48,6 @@ function Container1() {
         <h2>La chance vous dira ce que vous regarderez ce soir</h2>
       </div>
 
-      <div className="container1">
-        <button type="button" className="btn1">
-          Films
-        </button>
-        <button type="button" className="btn1">
-          Série
-        </button>
-
-        <select className="select" name="Genre" id="Genre">
-          <option value="">Drame</option>
-          <option value="">Comédie</option>
-          <option value="">Action</option>
-          <option value="">Thriller</option>
-          <option value="">Fantastique</option>
-          <option value="">Horreur</option>
-        </select>
-        <select className="select" name="time" id="time" type="time">
-          <option value="">0 à 1h</option>
-          <option value="">1h à 2h</option>
-          <option value="">+2h</option>
-        </select>
-      </div>
-
       <div className="roulette">
         <Wheel
           mustStartSpinning={mustSpin}
@@ -65,9 +57,20 @@ function Container1() {
             setMustSpin(false);
           }}
         />
-        <button className="btn1" onClick={handleSpinClick}>
+        <button
+          className="btn1"
+          onClick={() => {
+            handleSpinClick();
+            setTimeout(() => {
+              handleChange();
+            }, 12000);
+          }}
+        >
           GO
         </button>
+      </div>
+      <div className="cardrandom">
+        <CardMovie key={randomMovie.id} movie={randomMovie} />
       </div>
     </article>
   );
