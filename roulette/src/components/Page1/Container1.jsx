@@ -3,7 +3,8 @@ import { useState } from "react";
 import { Wheel } from "react-custom-roulette";
 import "./Container1.css";
 import axios from "axios";
-import CardMovie from "../Card/CardMovie";
+import CardRandom from "../Card/CardRandom";
+import Modal from "react-modal";
 
 function Container1() {
   const data = [
@@ -23,6 +24,15 @@ function Container1() {
   const [mustSpin, setMustSpin] = useState(false);
   const [prizeNumber, setPrizeNumber] = useState(0);
   const [randomMovie, setRandomMovie] = useState("");
+  const [modalIsOpen, setIsOpen] = useState(false);
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
 
   const handleChange = () => {
     axios
@@ -59,19 +69,17 @@ function Container1() {
         />
         <button
           className="btn1"
-          onClick={() => {
-            handleSpinClick();
-            setTimeout(() => {
-              handleChange();
-            }, 12000);
-          }}
+          onClick={(() => handleSpinClick(), () => openModal())}
         >
           GO
         </button>
       </div>
-      <div className="cardrandom">
-        <CardMovie key={randomMovie.id} movie={randomMovie} />
-      </div>
+      <Modal isOpen={modalIsOpen} onRequestClose={closeModal}>
+        <div className="cardrandom">
+          <CardRandom key={randomMovie.id} movie={randomMovie} />
+        </div>
+        <button onClick={closeModal}></button>
+      </Modal>
     </article>
   );
 }
