@@ -15,7 +15,11 @@
     padding: 26px 15px 30px;
     color: white;
     transition: all 0.5s 0s ease;
+    overflow-y: scroll;
+    overflow:hidden;
   }
+
+
   
   .card:hover {
     cursor: pointer;
@@ -32,7 +36,13 @@
       margin: 0 auto;
   }
 
-.cardrandom {
+  .cardrandom {
+    display: flex;
+    text-align: center;
+   justify-content: center;
+  }
+
+.cardran {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -40,6 +50,33 @@
   color: white;
   background-color: #141414;
   box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  width: 1200px;
+  padding: 20px;
+  text-align: center;
+  border: #E10915 1px solid;
+
+}
+
+.cardran img {
+  height: 500px;
+  height: 500px;
+  border-radius: 20px;
   
 }
- 
+
+.btn-close {
+  color: red;
+  width: 50px;
+  font-size: 30px;
+  background-color: #141414;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 20%;
+}
+
+.btn-close:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+

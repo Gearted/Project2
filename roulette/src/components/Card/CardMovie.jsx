@@ -13,8 +13,9 @@ export default function CardMovie({ movie }) {
         alt="poster"
       />
       <h2>{movie.title}</h2>
-      <p>{movie.overview}</p>
-      <p>{movie.release_date}</p>
+      <p>Synopsys : {movie.overview}</p>
+      <p>Date de sortie : {movie.release_date}</p>
+      <p>Vote des internautes : {movie.vote_average}</p>
     </div>
   );
 }

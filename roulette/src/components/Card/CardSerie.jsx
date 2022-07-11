@@ -13,8 +13,9 @@ export default function CardSerie({ movie }) {
         alt="poster"
       />
       <h2>{movie.name}</h2>
-      <p>{movie.overview}</p>
-      <p>{movie.first_air_date}</p>
+      <p>Synopsys : {movie.overview}</p>
+      <p>Date de sortie : {movie.first_air_date}</p>
+      <p>Vote des internautes : {movie.vote_average}</p>
     </div>
   );
 }

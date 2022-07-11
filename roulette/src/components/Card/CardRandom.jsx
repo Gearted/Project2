@@ -12,10 +12,12 @@ export default function CardRandom({ movie, setIsOpen }) {
         alt="poster"
       />
       <h2>{movie.title}</h2>
-      <p>{movie.overview}</p>
-      <p>{movie.release_date}</p>
-      <p>{movie.vote_average}</p>
-      <button onClick={() => setIsOpen(false)}>x</button>
+      <p> Synopsys : {movie.overview}</p>
+      <p> Date de sortie : {movie.release_date}</p>
+      <p> Note des internautes : {movie.vote_average}</p>
+      <button className="btn-close" onClick={() => setIsOpen(false)}>
+        x
+      </button>
     </div>
   );
 }
