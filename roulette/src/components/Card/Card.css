@@ -31,3 +31,15 @@
       display: block;
       margin: 0 auto;
   }
+
+.cardrandom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  background-color: #141414;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
+  
+}
+ 

@@ -2,7 +2,7 @@ import React from "react";
 
 export default function CardRandom({ movie, setIsOpen }) {
   return (
-    <div className="card">
+    <div className="cardran">
       <img
         src={
           movie.poster_path
@@ -14,6 +14,7 @@ export default function CardRandom({ movie, setIsOpen }) {
       <h2>{movie.title}</h2>
       <p>{movie.overview}</p>
       <p>{movie.release_date}</p>
+      <p>{movie.vote_average}</p>
       <button onClick={() => setIsOpen(false)}>x</button>
     </div>
   );

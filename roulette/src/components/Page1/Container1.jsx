@@ -43,43 +43,46 @@ function Container1() {
     setMustSpin(true);
   };
   return (
-    <article className="article1">
-      <div>
-        <h1>Faites vos jeux ! rien ne vas plus !</h1>
-        <h2>La chance vous dira ce que vous regarderez ce soir</h2>
-      </div>
+    <>
+      <article className="article1">
+        <div>
+          <h1>Faites vos jeux ! rien ne vas plus !</h1>
+          <h2>La chance vous dira ce que vous regarderez ce soir</h2>
+        </div>
 
-      <div className="roulette">
-        <Wheel
-          mustStartSpinning={mustSpin}
-          prizeNumber={prizeNumber}
-          data={data}
-          onStopSpinning={() => {
-            setMustSpin(false);
-          }}
-        />
-        <button
-          className="btn1"
-          onClick={() => {
-            handleSpinClick();
-            handleChange();
-            setTimeout(() => {
-              setIsOpen(true);
-            }, 12000);
-          }}
-        >
-          GO
-        </button>
+        <div className="roulette">
+          <Wheel
+            mustStartSpinning={mustSpin}
+            prizeNumber={prizeNumber}
+            data={data}
+            onStopSpinning={() => {
+              setMustSpin(false);
+            }}
+          />
+          <button
+            className="btn1"
+            onClick={() => {
+              handleSpinClick();
+              handleChange();
+              setTimeout(() => {
+                setIsOpen(true);
+              }, 12000);
+            }}
+          >
+            GO
+          </button>
+        </div>
+      </article>
+      <div className="cardrandom">
+        {isOpen && (
+          <CardRandom
+            setIsOpen={setIsOpen}
+            key={randomMovie.id}
+            movie={randomMovie}
+          />
+        )}
       </div>
-
-      {isOpen && (
-        <CardRandom
-          setIsOpen={setIsOpen}
-          key={randomMovie.id}
-          movie={randomMovie}
-        />
-      )}
-    </article>
+    </>
   );
 }
 
