@@ -37,10 +37,16 @@
   }
 
   .cardrandom {
+    
     display: flex;
-    text-align: center;
-   justify-content: center;
+    align-items: center;
+    justify-content: center;
+    
   }
+
+  
+
+ 
 
 .cardran {
   display: flex;
@@ -55,8 +61,15 @@
   padding: 20px;
   text-align: center;
   border: #E10915 1px solid;
-
+  animation: bounce-in 2s ease-in-out;
 }
+
+@keyframes bounce-in {
+  0%{ opacity: 0; transform: scale(.3); }
+  50%{ opacity: 1; transform: scale(1.0); }
+  70%{ transform: scale(0.9); }
+  100%{ transform: scale(1); }
+  }
 
 .cardran img {
   height: 500px;

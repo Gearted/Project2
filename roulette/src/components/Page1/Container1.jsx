@@ -55,6 +55,7 @@ function Container1() {
             mustStartSpinning={mustSpin}
             prizeNumber={prizeNumber}
             data={data}
+            spinDuration={0.3}
             onStopSpinning={() => {
               setMustSpin(false);
             }}
@@ -66,7 +67,7 @@ function Container1() {
               handleChange();
               setTimeout(() => {
                 setIsOpen(true);
-              }, 12000);
+              }, 3800);
             }}
           >
             GO
