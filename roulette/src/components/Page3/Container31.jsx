@@ -1,6 +1,4 @@
-import "./Container31.css"
-
-
+import "./Container31.css";
 
 function Container31() {
   return (
